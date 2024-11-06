@@ -79,28 +79,28 @@ function listenToConvertCurrencyElementClick() {
                     const flagElement = document.getElementById('convertedCurrencyFlag')
                     switch (selectedCurrency) {
                         case 'USD':
-                            flagElement.setAttribute("src", "/public/flags/united-states.png");
+                            flagElement.setAttribute("src", "public/flags/united-states.png");
                             break;
                         case 'EUR':
-                            flagElement.setAttribute("src", "/public/flags/european-union.png");
+                            flagElement.setAttribute("src", "public/flags/european-union.png");
                             break;
                         case 'GBP':
-                            flagElement.setAttribute("src", "/public/flags/united-kingdom.png");
+                            flagElement.setAttribute("src", "public/flags/united-kingdom.png");
                             break;
                         case 'AUD':
-                            flagElement.setAttribute("src", "/public/flags/australia.png");
+                            flagElement.setAttribute("src", "public/flags/australia.png");
                             break;
                         case 'NZD':
-                            flagElement.setAttribute("src", "/public/flags/new-zeland.png");
+                            flagElement.setAttribute("src", "public/flags/new-zeland.png");
                             break;
                         case 'CAD':
-                            flagElement.setAttribute("src", "/public/flags/canada.png");
+                            flagElement.setAttribute("src", "public/flags/canada.png");
                             break;
                         case 'CHF':
-                            flagElement.setAttribute("src", "/public/flags/swiss.png");
+                            flagElement.setAttribute("src", "public/flags/swiss.png");
                             break;
                         case 'JPY':
-                            flagElement.setAttribute("src", "/public/flags/japan.png");
+                            flagElement.setAttribute("src", "public/flags/japan.png");
                             break;
 
                     }
@@ -131,42 +131,42 @@ async function swapCurrencies() {
 
     switch (selectedConvertedCurrency) {
         case 'USD':
-            convertedFlagElement.setAttribute("src", "/public/flags/united-states.png")
+            convertedFlagElement.setAttribute("src", "public/flags/united-states.png")
             convertedCurrencyCode.innerHTML = 'USD'
             convertedCurrencySymbol.innerHTML = '$'
             break;
         case 'EUR':
-            convertedFlagElement.setAttribute("src", "/public/flags/european-union.png")
+            convertedFlagElement.setAttribute("src", "public/flags/european-union.png")
             convertedCurrencyCode.innerHTML = 'EUR'
             convertedCurrencySymbol.innerHTML = '€'
             break;
         case 'GBP':
-            convertedFlagElement.setAttribute("src", "/public/flags/united-kingdom.png")
+            convertedFlagElement.setAttribute("src", "public/flags/united-kingdom.png")
             convertedCurrencyCode.innerHTML = 'GBP'
             convertedCurrencySymbol.innerHTML = '£'
             break;
         case 'AUD':
-            convertedFlagElement.setAttribute("src", "/public/flags/australia.png")
+            convertedFlagElement.setAttribute("src", "public/flags/australia.png")
             convertedCurrencyCode.innerHTML = 'AUD'
             convertedCurrencySymbol.innerHTML = 'A$'
             break;
         case 'NZD':
-            convertedFlagElement.setAttribute("src", "/public/flags/new-zeland.png")
+            convertedFlagElement.setAttribute("src", "public/flags/new-zeland.png")
             convertedCurrencyCode.innerHTML = 'NZD'
             convertedCurrencySymbol.innerHTML = 'NZ$'
             break;
         case 'CAD':
-            convertedFlagElement.setAttribute("src", "/public/flags/canada.png")
+            convertedFlagElement.setAttribute("src", "public/flags/canada.png")
             convertedCurrencyCode.innerHTML = 'CAD'
             convertedCurrencySymbol.innerHTML = 'C$'
             break;
         case 'CHF':
-            convertedFlagElement.setAttribute("src", "/public/flags/swiss.png")
+            convertedFlagElement.setAttribute("src", "public/flags/swiss.png")
             convertedCurrencyCode.innerHTML = 'CHF'
             convertedCurrencySymbol.innerHTML = 'CHF'
             break;
         case 'JPY':
-            convertedFlagElement.setAttribute("src", "/public/flags/japan.png")
+            convertedFlagElement.setAttribute("src", "public/flags/japan.png")
             convertedCurrencyCode.innerHTML = 'JPY'
             convertedCurrencySymbol.innerHTML = '¥'
             break;
@@ -177,35 +177,35 @@ async function swapCurrencies() {
 
     switch (selectedConvertedToCurrency) {
         case 'USD':
-            convertedToFlagElement.setAttribute("src", "/public/flags/united-states.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/united-states.png")
             convertedToCurrencyCode.innerHTML = 'USD'
             break;
         case 'EUR':
-            convertedToFlagElement.setAttribute("src", "/public/flags/european-union.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/european-union.png")
             convertedToCurrencyCode.innerHTML = 'EUR'
             break;
         case 'GBP':
-            convertedToFlagElement.setAttribute("src", "/public/flags/united-kingdom.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/united-kingdom.png")
             convertedToCurrencyCode.innerHTML = 'GBP'
             break;
         case 'AUD':
-            convertedToFlagElement.setAttribute("src", "/public/flags/australia.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/australia.png")
             convertedToCurrencyCode.innerHTML = 'AUD'
             break;
         case 'NZD':
-            convertedToFlagElement.setAttribute("src", "/public/flags/new-zeland.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/new-zeland.png")
             convertedToCurrencyCode.innerHTML = 'NZD'
             break;
         case 'CAD':
-            convertedToFlagElement.setAttribute("src", "/public/flags/canada.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/canada.png")
             convertedToCurrencyCode.innerHTML = 'CAD'
             break;
         case 'CHF':
-            convertedToFlagElement.setAttribute("src", "/public/flags/swiss.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/swiss.png")
             convertedToCurrencyCode.innerHTML = 'CHF'
             break;
         case 'JPY':
-            convertedToFlagElement.setAttribute("src", "/public/flags/japan.png")
+            convertedToFlagElement.setAttribute("src", "public/flags/japan.png")
             convertedToCurrencyCode.innerHTML = 'JPY'
             break;
 
@@ -275,28 +275,28 @@ function listenToConvertedToCurrencyElementClick() {
                     const flagElement = document.getElementById('convertedToCurrencyFlag')
                     switch (selectedCurrency) {
                         case 'USD':
-                            flagElement.setAttribute("src", "/public/flags/united-states.png");
+                            flagElement.setAttribute("src", "public/flags/united-states.png");
                             break;
                         case 'EUR':
-                            flagElement.setAttribute("src", "/public/flags/european-union.png");
+                            flagElement.setAttribute("src", "public/flags/european-union.png");
                             break;
                         case 'GBP':
-                            flagElement.setAttribute("src", "/public/flags/united-kingdom.png");
+                            flagElement.setAttribute("src", "public/flags/united-kingdom.png");
                             break;
                         case 'AUD':
-                            flagElement.setAttribute("src", "/public/flags/australia.png");
+                            flagElement.setAttribute("src", "public/flags/australia.png");
                             break;
                         case 'NZD':
-                            flagElement.setAttribute("src", "/public/flags/new-zeland.png");
+                            flagElement.setAttribute("src", "public/flags/new-zeland.png");
                             break;
                         case 'CAD':
-                            flagElement.setAttribute("src", "/public/flags/canada.png");
+                            flagElement.setAttribute("src", "public/flags/canada.png");
                             break;
                         case 'CHF':
-                            flagElement.setAttribute("src", "/public/flags/swiss.png");
+                            flagElement.setAttribute("src", "public/flags/swiss.png");
                             break;
                         case 'JPY':
-                            flagElement.setAttribute("src", "/public/flags/japan.png");
+                            flagElement.setAttribute("src", "public/flags/japan.png");
                             break;
                     }
                 });
@@ -398,28 +398,28 @@ function listenToConvertCurrencyElementInCurrencyRatesClick() {
 
                     switch (selectedCurrency) {
                         case 'USD':
-                            flagElement.setAttribute("src", "/public/flags/united-states.png");
+                            flagElement.setAttribute("src", "public/flags/united-states.png");
                             break;
                         case 'EUR':
-                            flagElement.setAttribute("src", "/public/flags/european-union.png");
+                            flagElement.setAttribute("src", "public/flags/european-union.png");
                             break;
                         case 'GBP':
-                            flagElement.setAttribute("src", "/public/flags/united-kingdom.png");
+                            flagElement.setAttribute("src", "public/flags/united-kingdom.png");
                             break;
                         case 'AUD':
-                            flagElement.setAttribute("src", "/public/flags/australia.png");
+                            flagElement.setAttribute("src", "public/flags/australia.png");
                             break;
                         case 'NZD':
-                            flagElement.setAttribute("src", "/public/flags/new-zeland.png");
+                            flagElement.setAttribute("src", "public/flags/new-zeland.png");
                             break;
                         case 'CAD':
-                            flagElement.setAttribute("src", "/public/flags/canada.png");
+                            flagElement.setAttribute("src", "public/flags/canada.png");
                             break;
                         case 'CHF':
-                            flagElement.setAttribute("src", "/public/flags/swiss.png");
+                            flagElement.setAttribute("src", "public/flags/swiss.png");
                             break;
                         case 'JPY':
-                            flagElement.setAttribute("src", "/public/flags/japan.png");
+                            flagElement.setAttribute("src", "public/flags/japan.png");
                             break;
                     }
                 });
