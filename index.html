@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-[#FBFBFA] dark:bg-darkmodebg">
+  <div class="flex justify-center py-5">
+    <nav class="w-[70%] flex justify-between items-center max-[1400px]:w-[90%]">
+      <!-- <img src="/public/images/RateSwap.png" alt=""> -->
+      <div id="themeModeToggleButton" class="cursor-pointer">
+        <i id="icon" class="fas fa-moon text-5xl dark:text-white text-gray-900 transition-all duration-300 ease-in-out"></i>
+      </div>
+      <a href="https://www.facebook.com/islam.taleb.58" class="text-black font-poppins dark:text-gray-100" target="_blank"
+        rel="noopener noreferrer">About me</a>
+    </nav>
+  </div>
+  <div class="w-full flex justify-center mt-48 max-[500px]:mt-10">
+    <div class="w-[70%] flex gap-20 max-[1024px]:flex-col max-[1400px]:w-[90%]">
+      <div class="w-1/2 max-[1024px]:w-full">
+        <h1 class="font-bold font-poppins dark:text-gray-100">Currency Converter</h1>
+        <div class="border-t-2 mt-10 border-slate-600 h-60 py-5">
+          <span class="font-poppins mt-10 dark:text-gray-100">Based on the exchange rate of European Central Bank</span>
+          <div
+            class="bg-white dark:bg-gray-800 dark:text-gray-100 relative shadow-xl mt-10 w-full p-16 max-[500px]:mt-20 max-[1024px]:mt-28 mt flex flex-col max-[1024px]:p-5">
+            <div class="flex justify-between min-[500px]:justify-evenly">
+              <div class="flex space-x-10 items-center max-[500px]:space-x-4 max-[1400px]:space-x-5">
+                <img id="convertedCurrencyFlag" src="/public/flags/united-states.png" class="w-16 h-16" alt="">
+                <input type="number"
+                  class="font-poppins text-2xl w-32 max-[500px]:w-16 max-[1500px]:w-20 border-none outline-none bg-transparent p-0 m-0 shadow-none appearance-none"
+                  name="" id="inputAmount" value="1.00">
+                <p id="convertedCurrencySymbol" class="font-poppins text-2xl max-[1024px]:text-xl">$</p>
+              </div>
+
+              <div id="convertedCurrenciesDropdown"
+                class="font-poppins font-semibold flex items-center justify-center gap-3 cursor-pointer">
+                <span id="convertedCurrencyCode" class="text-2xl max-[1024px]:text-xl">USD</span>
+                <div id="convertedCurrencyArrowDown"
+                  class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-gray-100 transform rotate-180">
+                </div>
+                <div id="convertedCurrencyArrowUp"
+                  class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-gray-100 transform rotate-0 hidden">
+                </div>
+              </div>
+            </div>
+
+            <div id="convertedCurrenciesListParent"
+              class="bg-white dark:bg-gray-800 mt-14 z-20 self-end absolute shadow-xl hidden w-52 h-36 rounded-lg p-5 overflow-auto">
+              <ul id="convertedCurrenciesList"></ul>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="w-full mt-5 max-[1024px]:mt-0 flex justify-center">
+          <div id="arrowAnimateParent"
+            class="rounded-full absolute z-10 h-20 w-20 bg-white border-slate-500 border cursor-pointer flex justify-center items-center">
+            <i id="arrowAnimate" class="fa-solid fa-arrows-rotate text-2xl font-semibold"></i>
+          </div>
+        </div>
+
+        <div class="h-60 py-5 ">
+          <div class="bg-white dark:bg-gray-800 dark:text-gray-100 relative shadow-xl w-full p-16 mt-10 flex flex-col max-[1024px]:p-5">
+            <div class="flex justify-between min-[500px]:justify-evenly">
+              <div class="flex space-x-10 items-center max-[500px]:space-x-4 max-[1400px]:space-x-5">
+                <img id="convertedToCurrencyFlag" src="/public/flags/european-union.png" class="w-16 h-16" alt="">
+
+                <input type="number"
+                  class="font-poppins opacity-0 text-2xl w-32 max-[500px]:w-16 max-[1500px]:w-20 border-none outline-none bg-transparent p-0 m-0 shadow-none appearance-none"
+                  name="" id="inputAmount" value="1.00">
+                <p id="convertedCurrencySymbol" class="font-poppins opacity-0 text-2xl max-[1024px]:text-xl">$</p>
+              </div>
+
+              <div id="convertedToCurrenciesDropdown"
+                class="font-poppins font-semibold flex items-center justify-center gap-3 cursor-pointer">
+                <span id="convertedToCurrencyCode" class="text-2xl max-[1024px]:text-xl">EUR</span>
+                <div id="convertedToCurrencyArrowDown"
+                  class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-gray-100 transform rotate-180">
+                </div>
+                <div id="convertedToCurrencyArrowUp"
+                  class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-gray-100 transform rotate-0 hidden">
+                </div>
+              </div>
+            </div>
+
+            <div id="convertedToCurrenciesListParent"
+              class="bg-white dark:bg-gray-800 mt-14 self-end absolute shadow-xl hidden w-52 h-36 rounded-lg p-5 overflow-auto">
+              <ul id="convertedToCurrenciesList"></ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mt-20 flex justify-between max-[1024px]:items-center max-[1024px]:mt-5 max-[1024px]:flex-col">
+          <button id="convertButton"
+            class="rounded-md font-poppins max-[500px]:mt-4 w-40 h-12 bg-black dark:bg-cyan-700 py-2 px-4 flex justify-center items-center border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 duration-200">
+            Convert
+          </button>
+          <h1 id="convertedTitle" class="font-poppins text-2xl hidden max-[500px]:-order-1 dark:text-gray-100">The converted value is: <p
+              id="result" class="font-poppins text-2xl text-green-600"></p>
+          </h1>
+        </div>
+      </div>
+      <div class="w-1/2 max-[1024px]:w-full">
+        <h1 class="font-bold font-poppins dark:text-gray-100">Currency Rates</h1>
+        <div class="border-t-2 mt-10 border-slate-600 h-60 py-5">
+          <div class="bg-white mt-16 dark:bg-slate-800 dark:text-gray-100">
+            <div class="flex justify-evenly items-center max-[500px]:justify-center max-[500px]:gap-3">
+              <h1 class="text-3xl font-poppins font-semibold p-10 max-[500px]:p-2 max-[500px]:text-xl">Main Currency
+              </h1>
+              <img src="/public/flags/united-states.png" class="w-20 h-20" alt="" id="currencyRatesFlag">
+
+              <div id="currencyRatesDropdown" class="flex flex-col">
+                <div class="font-poppins font-semibold flex items-center cursor-pointer">
+                  <div class="flex gap-3 items-center">
+                    <span id="currencyRatesCode" class="text-2xl">USD</span>
+                    <div id="currencyRatesArrowDown"
+                      class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-slate-100 transform rotate-180">
+                    </div>
+                    <div id="currencyRatesArrowUp"
+                      class="w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black dark:border-b-slate-100 transform rotate-0 hidden">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="currencyRatesListParent"
+                  class="bg-white dark:bg-slate-800 mt-12 z-20 max-[500px]:self-end self-center absolute shadow-xl hidden w-52 h-36 rounded-lg p-5 overflow-auto">
+                  <ul id="currencyRateList"></ul>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="flex items-center shadow-xl dark:text-gray-100 bg-white dark:bg-slate-800 p-10 max-[500px]:p-3 justify-between">
+              <ul class="font-poppins font-semibold flex flex-col gap-3" id="name">Name
+
+              </ul>
+              <ul class="font-poppins font-semibold flex flex-col gap-3" id="price">Price
+
+              </ul>
+              <ul class="font-poppins font-semibold flex flex-col gap-3" id="refresh-time">Refresh Time
+
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+<style>
+  /* Hide arrows for number input in Chrome, Safari, and Edge */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Hide arrows for number input in Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+</style>
+<script src="/src/main.js" type="module"></script>
+
+</html>
